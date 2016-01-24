@@ -1,13 +1,3 @@
-from django.db import models
-from treebeard.mp_tree import MP_Node
-
-class Category(MP_Node):
-    name = models.CharField(max_length=30)
-
-    node_order_by = ['name']
-
-    def __unicode__(self):
-        return 'Category: %s' % self.name
 # This is an auto-generated Django model module.
 # You'll have to do the following manually to clean this up:
 #   * Rearrange models' order
@@ -20,6 +10,15 @@ class Category(MP_Node):
 from __future__ import unicode_literals
 
 from django.db import models
+from treebeard.mp_tree import MP_Node
+
+class Category(MP_Node):
+    name = models.CharField(max_length=30)
+
+    node_order_by = ['name']
+
+    def __unicode__(self):
+        return 'Category: %s' % self.name
 
 
 class AbAccessPermissions(models.Model):
