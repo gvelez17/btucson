@@ -1,10 +1,12 @@
 import MySQLdb
 import re
+import os
 
+pass = os.getenv('RPASS')
 
 db = MySQLdb.connect(host="localhost",
                      user='root',
-                     passwd='grummich',
+                     passwd=pass,
                      db='rcats')
 
 
