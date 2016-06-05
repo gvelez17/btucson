@@ -2,6 +2,9 @@ import MySQLdb
 import re
 import os
 
+# Adhesives & Sealants,17130502470000000000000000000000,Business Directory|1713 > A|171305
+# Adhesives & Glues,17130502470100000000000000000000,Business Directory|1713 > A|171305 > Adhesives & Sealants|17130502
+
 rpass = os.getenv('RPASS')
 
 db = MySQLdb.connect(host="localhost",
@@ -9,13 +12,11 @@ db = MySQLdb.connect(host="localhost",
                      passwd=rpass,
                      db='rcats')
 
-
 cur = db.cursor()
 
 recur = db.cursor()
 
-
-cur.execute(" select * from rcatdb_categories where LEFT(catcode, 2) = (select LEFT(catcode,2) from rcatdb_categories where name = 'Tucson') order by catcode")
+cur.execute("select * from rcatdb_categories where LEFT(catcode,3) = LEFT((select catcode from rcatdb_categories where id = 306),3) order by catcode")
 
 for row in cur.fetchall():
     relurl = row[3]
@@ -29,7 +30,7 @@ for row in cur.fetchall():
     if row[4][0] != '\x17' or (row[4][0:3] == '\x17\x13\x01') or (row[4][0:2] == '\x17\x02'):
         continue
     
-    slug = row[4].encode("hex")
+    slug = row[4][0:len(parts)+1].encode("hex")
 
     name = parts[-1]
     mx = len(parts) -1
