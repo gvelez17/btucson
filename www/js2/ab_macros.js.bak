@@ -1,0 +1,17 @@
+// from www.daniweb.com/techtalkforums/thread45103.html
+
+// Macros have specific text
+function add_bTucson_comment_bookmark() {
+	
+	title = 'about Tucson page';
+	url = "javascript:w=window.open('http://btucson.com/about/'+location,'abra_relate','left=20,top=20,width=800,height=700,location=yes,status=yes,resizable=yes,scrollbars=yes,toolbar=yes,menubar=yes');w.focus;void 0";
+
+        if (window.sidebar) { // firefox
+              window.sidebar.addPanel(title, url,"");
+        } else if( window.external ) { //MSIE
+                window.external.AddFavorite( url, title);
+        } else {
+               alert("Sorry, your browser doesn't support this");
+        }
+}
+
