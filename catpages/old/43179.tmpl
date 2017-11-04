@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Category: [|CATID|] : [|CATNAME|] [|CATCODE|] -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Tucson [|CATNAME|]</title>
+<link rel="stylesheet" href="/boxy.css" type="text/css" />
+<link rel="shortcut icon" href="/favicon.ico" >
+<script type="text/javascript" src="/js2/prototype.js"></script>
+<script type="text/javascript" src="/js2/ab_utils.js"></script>
+<script type="text/javascript" src="/js2/adsense-728-90.js"></script>
+</head>
+
+<body>
+
+<div class="popup" id="placeAddForm">
+</div>
+<table border=0><tr><td width="835" valign=top>
+  <h1 class="catname"><A HREF="http://btucson.com/">Tucson</A> [|CATNAME|]</h1>
+<br>
+
+<div class="adsense"><A HREF="http://abra.info/"><img src="/imgs/abracat.png" alt="Powered by ABRA" border=0 valign=center></A>&nbsp;<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+
+<div class="ab_navbar">
+[|DIVCATPATH|]
+</div>
+</td><td>
+[|FEATURE|]
+</td></tr></table>
+	
+
+
+<div id="content">
+
+    <span style="float: right; font-size: small">
+	<A HREF="javascript:ab_show_popwin('placeAddForm','/inc/add_to_cat.php?CATID=[|CATID|]&CATNAME=[|CATNAME|]')">add item</A><span id=loginelem> | [|LOGINLINK|]</span>
+
+<script type="text/javascript">
+if ( ab_have_session() ) {
+	var mlogin = document.getElementById("loginelem");	
+	mlogin.style.visibility = 'hidden';
+}
+</script>
+
+
+    </span>
+<br>	
+
+  [|CATIMG|]
+
+
+  <div class="story">
+~TOPITEMS~ <H3>[|NAME|]</H3>[|?LINK?:"<A TARGET='btucson_external' CLASS=blogextlink HREF='"|][|LINK|][|?LINK?:"'>"|][|LINK|][|?LINK?:"</A><br>"|][|ADDR|][|?ADDR?:"<br>"|][|PHONE|][|?PHONE?:"<br>"|][|SHORT_CONTENT|] </p>
+
+<table width="100%">
+~CATITEMS~ <tr><td align=left valign=top><b><A HREF="[|ITEMLINK|]">[|NAME|]</A></b> [|?LINK?:"<br><A TARGET='btucson_external' CLASS=itemlink HREF='"|][|LINK|][|?LINK?:"'>"|][|LINK|][|?LINK?:"</A>"|][|?ADDR?:"<br>"|][|ADDR|][|?PHONE?:"<br>"|][|PHONE|][|?DISTRICT?:"<br>"|][|DISTRICT|][|?SHORT_CONTENT?:"<br>"|][|SHORT_CONTENT|] [|READ_MORE|]  [|?LOGIN?:"--"|][|LOGIN|]</td><td align=right valign=top>[|EDITLINKS|]</td></tr>
+</table>
+
+~SUBCATS~ <A NAME="[|CATTAG|]"></A> <h3>[|NAME|]</h3> [|ITEMLINKS|] [|SUBSUBCATS|]
+
+<p>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+ </div>
+
+</div>
+<!--end content -->
+<div id="navBar">
+  <div id="search">
+
+<form method=get ACTION="/cgi-bin/wgtuc/webglimpse.cgi">
+
+<input type=hidden name="ID" value=2>
+
+<input type=HIDDEN name=limit value="500:100">
+<input type=HIDDEN name=cache value="yes">
+<INPUT TYPE=HIDDEN NAME=autosyntax VALUE="ALL"> <!-- AND together all words instead of exact phrase -->
+
+<input type=hidden name="maxlines" value=5>
+<input type=hidden name="maxchars" value=1500>
+      <label>search</label>
+
+<INPUT NAME=query size=10> <INPUT TYPE=submit VALUE=Go><br>
+<p><small><A HREF="/cgi-bin/wgtuc/webglimpse.cgi?ID=2&template=wgsimple.html">Search options</A>
+<br>
+<A HREF="javascript:addBookmark('Tucson [|CATNAME|]',document.location);">Bookmark this page</A>
+</small>
+</p>
+    
+    </form>
+
+  </div>
+  <div id="sectionLinks">
+    <ul>
+~SUBCATS~ <li><A HREF="[|CATLINK|]">[|NAME|]</A> </li>
+    </ul>
+  </div>
+  <div class="relatedLinks">
+Related Categories
+<UL>
+~RELCATS~ <LI><A HREF="[|CATLINK|]">[|NAME|]</A></LI>
+</UL>
+  </div>
+  <A NAME="add"></A>
+<H3><A HREF="javascript:ab_show_popwin('placeAddForm','/inc/add_to_cat.php?CATID=[|CATID|]&CATNAME=[|CATNAME|]')">FREE - add listings or comments in this category</A></H3>
+<i>Please report spam or fraudulent listings <A HREF="http://iwhome.com/iwork/contact.html">here</A></i><p>
+
+<A HREF="javascript:ab_show_popwin('placeAddForm','/inc/add_to_cat.php?CATID=[|CATID|]&CATNAME=[|CATNAME|]')">click here to add your listing</A>
+
+</div> <!-- navBar -->
+
+<div id="siteInfo"><a href="http://iwhome.com/iwork/contact.html">Contact Us</a> | &copy;2007 bTucson </div>
+
+<br />
+</body>
+</html>

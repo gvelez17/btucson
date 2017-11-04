@@ -1,0 +1,76 @@
+####################################################################
+# returns all items in subcats of cat that have short_content 
+sub get_all_blogitems {
+	my $curcat = shift;
+	my $lvl = shift;
+	my $itemref = shift;
+
+# return array of hashes
+
+	my $sel_types = '';
+	my $sel_tables = '';
+	my $where_tables = '';
+	foreach $abtype (@apply_types) {
+		$sel_types .= ','. $abtype.'.*';
+		$sel_tables .= ','.$abtype;
+		$where_tables .= " and $abtype.id = rcatdb_items.id ";
+	}
+
+ 	my $q = "select rcatdb_items.id, rcatdb_items.itemcode, rcatdb_items.cid, rcatdb_items.name, rcatdb_items.short_content, rcatdb_items.url, rcatdb_items.qualifier, rcatdb_items.effective_date, rcatdb_items.entered from rcatdb_items,rcatdb_categories where rcatdb_categories.id = $curcat and  LEFT(itemcode,$lvl) = LEFT(catcode,$lvl) and rcatdb_items.short_content IS NOT NULL and rcatdb_items.security_level = 0 $where_tables  order by rcatdb_items.effective_date desc, rank desc, entered desc, itemcode asc limit 100";
+
+#print "Query is $q\n";
+
+	&AbUtils::get_query_results($itemref, $q);
+
+#print "Got $#$itemref results\n";
+
+	$rel_limit = 100 - $#$itemref;
+
+	$q1 = "select rcatdb_items.id, rcatdb_items.itemcode, rcatdb_items.cid, rcatdb_items.name, rcatdb_items.short_content, rcatdb_items.url, rcatdb_items.qualifier, rcatdb_items.effective_date, rcatdb_items.entered $sel_types from rcatdb_items, rcatdb_ritems where rcatdb_ritems.id = rcatdb_items.id and and rcatdb_items.short_content IS NOT NULL and rcatdb_items.security_level = 0 and rcatdb_ritems.cat_dest = $curcat and rcatdb_ritems.relation = 'BELONGS_TO'  order by rcatdb_items.effective_date desc, rank desc, entered desc, itemcode asc limit $rel_limit";
+
+	&AbUtils::get_query_results($itemref, $q1);
+
+#print "rquery is $q1\n";
+#print "With related, have $#$itemref results\n";
+
+# values->urls if match
+	for my $p (@$itemref) {
+
+	# hardcode for now to test crashing
+		my $extra_ref = $dbh->selectrow_hashref("select ADDR, PHONE from ab_biz_org where ID = ".$p->{'ID'});
+		if ($extra_ref) {
+			$p->{'ADDR'} = $extra_ref->{'ADDR'};
+			$p->{'PHONE'} = $extra_ref->{'PHONE'};
+		}
+
+		$p->{'LINK'} = $p->{'URL'};
+		
+#TODO: improve templating
+
+		$p->{SHORT_CONTENT} = &CommandWeb::HTMLize($p->{'SHORT_CONTENT'});
+	
+		$p->{META_DESCRIPTION};
+#print "finding related links...";
+#		$p->{RELATED_LINKS} = &AbUtils::make_rel_links($p->{'ID'});
+
+		$p->{ITEMCAT} = my $itemcat = $p->{'CID'};
+#print "Going to get cat for item...";
+		my $itemcatref;
+		if (exists $HAVECATS{$itemcat}) {
+			$itemcatref = $HAVECATS{$itemcat};
+		} else {
+			$itemcatref = new AbCat($itemcat);
+			$HAVECATS{$itemcat} = $itemcatref;
+		}
+#print "got it..";
+
+		my $item_show_from_level = $SHOW_FROM_LEVEL;  # must match $rootdom or whatever dom is passed
+
+		$p->{ITEMCATPATH} = $itemcatref->make_nice_catpath($rootdom,$item_show_from_level);
+
+		$p->{ITEMCODE} = &AbUtils::catcodestr($p->{'ITEMCODE'});
+#print "made catcodestr\n";
+
+	}
+	#TODO use proper URL matching
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Tucson [|CATNAME|]</title>
+<link rel="stylesheet" href="/boxy.css" type="text/css" />
+<script src="/js2/prototype.js"></script>
+<script type="text/javascript" src="/js2/ab_utils.js"></script>
+<script src="/js2/adsense-728-90.js"></script>
+</head>
+
+<body>
+
+<div class="adsense"><center><script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></center></div>
+
+<div class="ab_navbar">
+[|DIVCATPATH|]
+</div>
+	
+
+
+<div id="content">
+  <h1><A HREF="http://btucson.com/">Tucson</A> [|CATNAME|]</h1>
+
+  <div class="feature"> <img src="/Tucson/Schools%20&%20Universities/Education.jpg" width="280" height="200" />
+	<div class="toplinks">New on the SuperBlog -- <A HREF="/Tucson/Schools & Universities/#add">add item</A> | <A HREF="/php/access_user/register.php?title=Tucson%20Pages&next_url=http://btucson.com/">register</A> | <a href="http://btucson.com/php/access_user/login.php">login</A> 
+	</div>
+
+	<div class="sblog" style="height:170px">
+
+~BLOGITEMS~ <p class="catitem"><b><small>[|EFFECTIVE_DATE|]</small></b> [|ITEMCATPATH|]<br> [|?LINK?:"<A CLASS=bloglink HREF='"|][|LINK|][|?LINK?:"'>"|]<b>[|NAME|]</b>[|?LINK?:"</A>"|]<br>[|ADDR|][|?ADDR?:"<br>"|][|PHONE|][|?PHONE?:"<br>"|][|SHORT_CONTENT|]  [|?LOGIN?:"--"|][|LOGIN|]<small><A class=blogextlink HREF="[|URL|]">[|DISPLAY_URL|]</A></small><br>[|CONTENT|]</p>
+
+	</div>
+
+
+
+  </div>
+
+  <div class="story">
+~CATITEMS~ <p class="catitem"><b><small>[|EFFECTIVE_DATE|]</small></b> <b>[|NAME|]<br> [|?LINK?:"<A CLASS=blogextlink HREF='"|][|LINK|][|?LINK?:"'>"|][|LINK|][|?LINK?:"</A><br>"|][|ADDR|][|?ADDR?:"<br>"|][|PHONE|][|?PHONE?:"<br>"|][|DISTRICT|][|?DISTRICT?:"<br>"|][|SHORT_CONTENT|]  [|?LOGIN?:"--"|][|LOGIN|]</p>
+
+~SUBCATS~ <A NAME="[|CATTAG|]"></A> <h3>[|NAME|]</h3> [|ITEMLINKS|]
+
+<!--
+<td width="240"><ul>
+
+    <li><a target=_blank href="http://www.toshiba.com/tai/exploravision/page38.htm">Corbett Elementary School</a></li>
+    <li><a target=_blank href="http://www.amphi.com/~coronado/">Coronado K-8 School</a></li>
+    <li><a target=_blank href="http://www.vail.k12.az.us/cwehome/">Cottonwood Elementary</a></li>
+...
+-->
+ </div>
+
+</div>
+<!--end content -->
+<div id="navBar">
+  <div id="search">
+    <FORM method=get ACTION="/cgi-bin/wgtuc/webglimpse.cgi">
+<INPUT TYPE=HIDDEN NAME="ID" VALUE="1">
+      <label>search</label>
+
+<INPUT NAME=query size=10> <INPUT TYPE=submit VALUE=Go><br>
+<p><A HREF="/cgi-bin/wgtuc/webglimpse.cgi?ID=1"><small>Advanced Search</small></A></p>
+</FORM>
+
+
+    
+    </form>
+  </div>
+  <div id="sectionLinks">
+    <ul>
+~SUBCATS~ <li><A HREF="[|CATLINK|]">[|NAME|]</A> </li>
+   <!--   <li><a href="index.html#Tucson">Tucson School Districts</a></li>-->
+    </ul>
+  </div>
+  <div class="relatedLinks">
+Related Categories
+<UL>
+~RELCATS~ <LI><A HREF="[|CATLINK|]">[|ROUTE|]</A></LI>
+</UL>
+  </div>
+  <A NAME="add"></A>
+<H3>FREE - add listings or comments in this category</H3>
+<i>Please report spam or fraudulent listings <A HREF="http://iwhome.com/iwork/contact.html">here</A></i><br>
+
+<small><A HREF="/php/access_user/register.php?title=Tucson%20Pages">Register to enter your free listing below!</A> | Already registered? <b><A HREF="/php/access_user/login.php">login here</A></b></small><br>
+<FORM action="/cgi/blogform.pl" method=post ">
+
+<p>
+<input type=HIDDEN name="_REPLY" value="http://btucson.com/thankyou.php">
+<!-- Also don't change the names of the input tags.  Anything else below is fair game -->
+Listing Title : <input name="title" size=20>
+<p>
+Listing Text :
+<textarea rows=3 cols=20 name="SHORT_CONTENT"></textarea>
+<p>
+Category :
+<SELECT name="_catid">
+<OPTION value=308> Schools & Universities
+</SELECT>
+<p>
+URL: <input name="URL" size=25><br>
+Phone: <input name="TYPE:ab_biz_org:phone" size=25><br>
+Address: <input name="TYPE:ab_biz_org:addr" size=25><br>
+<p>
+Guest posts welcome - if you are a human, please finish this line: <i>Humpty Dumpty sat on a <input name="human_check_1" size=4 maxlength=4></i>
+<p>
+<input type=submit value="Post">
+</FORM>
+
+<div id="siteInfo"><a href="mailto:diane@roadsoflife.com">Contact Us</a> | &copy;2007 bTucson </div>
+
+<br />
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-753026-1";
+urchinTracker();
+</script>
+</body>
+</html>

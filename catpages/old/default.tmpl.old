@@ -1,0 +1,109 @@
+<HTML><head>
+
+<title>[|CATNAME|]</title>
+ <base href="http://btucson.com/">
+
+ <link href="/2col.css" rel="styleSheet" type="text/css">
+
+ <script src="/js/prototype.js"></script>
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<center>
+<H1>[|CATPATH|]</H1>
+<script type="text/javascript"><!--
+google_ad_client = "pub-4097477930730596";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+google_color_border = "336699";
+google_color_bg = "DDEEFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</center>
+
+<div id="leftcol">
+
+<table border=0 width="100%"> 
+~SUBCATS~ <FMT_BEGIN><A HREF="[|CATLINK|]">[|NAME|]</A></FMT_END>
+</table>
+
+<H3>FREE - add listings in this category</H3>
+<i>Please report spam or fraudulent listings <A HREF="http://iwhome.com/iwork/contact.html">here</A></i><br>
+
+<small><A HREF="/php/access_user/register.php?title=Tucson%20Pages">Register to enter your free listing below!</A> | Already registered? <b><A HREF="/php/access_user/login.php">login here</A></b></small><br>
+<FORM action="/cgi/blogform.pl" method=post ">
+<!-- doform has to do more than just post entry
+   needs to validate and/or create login
+   post under right category
+-->
+<input type=submit value="POST">.
+<p>
+<input type=HIDDEN name="_REPLY" value="http://btucson.com/housing/">
+<!-- Also don't change the names of the input tags.  Anything else below is fair game -->
+Listing Title : <input name="title" size=25>
+<p>
+Listing Text :
+<textarea rows=4 cols=43 name="SHORT_CONTENT"></textarea>
+<p>
+Category :
+<SELECT name="_catid">
+<OPTION value=[|CATID|]> [|CATNAME|]
+~SUBCATS~ <OPTION value=[|ID|]> [|NAME|] 
+</SELECT>
+<br>
+If there is a URL that relates to your post you can enter it here, or just put it in the text of your post. <input name="url" size=50>
+<p>
+Guest posts welcome - if you are a human, please finish this line: <i>Humpty Dumpty sat on a <input name="human_check_1" size=4 maxlength=4></i>
+<p>
+<input type=submit value="Post">
+</FORM>
+
+</div>
+<div id="rightcol"> 
+
+
+<table bgcolor='#eeddbb' class=blog cellpadding=3 align=right>
+<tr><td bgcolor="#eeffee" class=bloghead>What's new on the Tucson [|CATNAME|] SuperBlog:</td></tr>
+~CATITEMS~ <tr><td><b><small>[|EFFECTIVE_DATE|]</small></b> [|ITEMCATPATH|]<br> [|?LINK?:"<A CLASS=bloglink HREF='"|][|LINK|][|?LINK?:"'>"|]<b>[|NAME|]</b>[|?LINK?:"</A>"|][|?SHORT_CONTENT?:" : "|][|SHORT_CONTENT|]  --[|LOGIN|]<small><A class=blogextlink HREF="[|URL|]">[|DISPLAY_URL|]</A></small><br>[|CONTENT|]<p></td></tr>
+
+<br>
+...
+
+</table>
+
+</div>
+<br clear=all>
+<div align=center id="fullscreen">
+
+
+<img usemap="#t" border=0 src="tucsonbar2.gif">
+<MAP NAME="t">
+<AREA SHAPE="rect" COORDS="288,69,356,136" HREF="http://tucson/tucson/" target="_top">
+<AREA SHAPE="rect" COORDS="217,70,286,137" HREF="/tucson/schools.html" target="_top">
+<AREA SHAPE="rect" COORDS="146,71,216,137" HREF="/tucson/rec.html" target="_top">
+<AREA SHAPE="rect" COORDS="74,68,143,136" HREF="http://tucson/biz" target="_top">
+<AREA SHAPE="rect" COORDS="3,69,73,137" HREF="/tucson/gov/" target="_top">
+<AREA SHAPE="rect" COORDS="287,-22,357,67" HREF="/tucson/news.html" target="_top">
+<AREA SHAPE="rect" COORDS="216,-14,285,67" HREF="/tucson/housing" target="_top">
+<AREA SHAPE="rect" COORDS="145,-18,216,69" HREF="/resources" target="_top">
+<AREA SHAPE="rect" COORDS="74,-2,144,69" HREF="/tucson/community" target="_top">
+<AREA SHAPE="rect" COORDS="3,0,73,68" HREF="/tucson/eating.html" target="_top"></MAP>
+<br>
+
+
+
+
+</center><br>
+</div>
+</body>
+</HTML>

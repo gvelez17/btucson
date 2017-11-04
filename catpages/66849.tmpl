@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Category: [|CATID|] : [|CATNAME|] [|CATCODE|] -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta description="[|META_DESCRIP|]">
+<title>Tucson [|CATNAME|]</title>
+<link rel="stylesheet" href="/boxy.css" type="text/css" />
+<link rel="shortcut icon" href="/favicon.ico" >
+<script type="text/javascript" src="/js2/prototype.js"></script>
+<script type="text/javascript" src="/js2/ab_utils.js"></script>
+<script type="text/javascript" src="/js2/urchin.js"></script>
+
+</head>
+
+<body>
+[|MENUDIVS|]
+
+
+<!-- you can't pull this out into a script because it needs to be substituted -->
+   <script type="text/javascript">
+w = 0;
+if (window.width) {
+        w = window.width;
+} else if (window.innerWidth) {
+        w = window.innerWidth;
+} else if (document.body.clientWidth) {
+        w = document.body.clientWidth;
+}
+if (w > 1055) {
+	f_width = w - 860;
+        document.write('<span style="width:' + f_width + 'px; float:right;">');
+        document.write('[|FEATURE|]');
+        document.write('</span>');
+}
+    </script>
+
+
+<div class="popup" id="placeAddForm">
+</div>
+  <h1 class="catname"><A HREF="http://btucson.com/">Tucson</A> [|CATNAME|]</h1>
+<div class="adsense"><A HREF="http://abra.info/"><img src="/imgs/abracat.png" alt="Powered by ABRA" border=0 valign=center></A>&nbsp;
+[|CAT_IMGS|]
+[|GOOGLE_AD_CODE|]
+</div>
+
+<div class="ab_navbar">
+[|DIVCATPATH|] 
+</div>
+	
+
+
+<div id="content">
+
+    <span style="float: right; font-size: small">
+	<A HREF="javascript:ab_show_popwin('placeAddForm','/inc/add_to_cat.php?CATID=[|CATID|]&CATNAME=[|CATNAME|]')">add item</A><span id=loginelem> | [|LOGINLINK|]</span>
+
+<script type="text/javascript">
+if ( ab_have_session() ) {
+	var mlogin = document.getElementById("loginelem");	
+	mlogin.style.visibility = 'hidden';
+}
+</script>
+
+
+    </span>
+<br>	
+
+
+  <div class="feature"> 
+
+[|BLOGROLL|]
+
+  </div>
+
+
+
+
+  <div class="story">
+~TOPITEMS~ <H3>[|NAME|]</H3>[|?LINK?:"<A TARGET='btucson_external' CLASS=blogextlink HREF='"|][|LINK|][|?LINK?:"'>"|][|LINK|][|?LINK?:"</A><br>"|][|ADDR|][|?ADDR?:"<br>"|][|PHONE|][|?PHONE?:"<br>"|][|SHORT_CONTENT|] </p>
+
+~SUBCATS~ <A NAME="[|CATTAG|]"></A> <h3>[|NAME|]</h3> [|ITEMLINKS|] [|SUBSUBCATS|]
+
+<table width="100%">
+~CATITEMS~ <tr><td align=left valign=top><b><A HREF="[|ITEMLINK|]">[|NAME|]</A></b> [|?LINK?:"<br><A TARGET='btucson_external' CLASS=itemlink HREF='"|][|LINK|][|?LINK?:"'>"|][|LINK|][|?LINK?:"</A>"|][|?ADDR?:"<br>"|][|ADDR|][|?PHONE?:"<br>"|][|PHONE|][|?DISTRICT?:"<br>"|][|DISTRICT|][|?SHORT_CONTENT?:"<br>"|][|SHORT_CONTENT|] [|READ_MORE|]  [|?LOGIN?:"--"|][|LOGIN|]</td><td align=right valign=top>[|EDITLINKS|]</td></tr>
+</table>
+
+
+<p>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+ </div>
+
+</div>
+<!--end content -->
+<div id="navBar">
+  <div id="search">
+
+<form method=get ACTION="/cgi-bin/wgtuc/webglimpse.cgi">
+
+<input type=hidden name="ID" value=2>
+
+<input type=HIDDEN name=limit value="500:100">
+<input type=HIDDEN name=cache value="yes">
+<INPUT TYPE=HIDDEN NAME=autosyntax VALUE="ALL"> <!-- AND together all words instead of exact phrase -->
+
+<input type=hidden name="maxlines" value=5>
+<input type=hidden name="maxchars" value=1500>
+      <label>search</label>
+
+<INPUT NAME=query size=10> <INPUT TYPE=submit VALUE=Go><br>
+<p><small><A HREF="/cgi-bin/wgtuc/webglimpse.cgi?ID=2&template=wgsimple.html">Search options</A>
+<br>
+<A HREF="javascript:addBookmark('Tucson [|CATNAME|]',document.location);">Bookmark this page</A>
+</small>
+</p>
+    
+    </form>
+
+  </div>
+  <div id="sectionLinks">
+    <ul>
+~SUBCATS~ <li><A HREF="[|CATLINK|]">[|NAME|]</A> </li>
+    </ul>
+  </div>
+  <div class="relatedLinks">
+Related Categories
+<UL>
+~RELCATS~ <LI><A HREF="[|CATLINK|]">[|NAME|]</A></LI>
+</UL>
+  </div>
+  <A NAME="add"></A>
+<H3><A HREF="javascript:ab_show_popwin('placeAddForm','/inc/add_to_cat.php?CATID=[|CATID|]&CATNAME=[|CATNAME|]')">FREE - add listings or comments in this category</A></H3>
+<i>Please report spam or fraudulent listings <A HREF="/contact.html">here</A></i><p>
+
+<A HREF="javascript:ab_show_popwin('placeAddForm','/inc/add_to_cat.php?CATID=[|CATID|]&CATNAME=[|CATNAME|]')">click here to add your listing</A>
+<p>
+<a href="http://del.icio.us/post" onclick="window.open('http://del.icio.us/post?v=4&noui&jump=close&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=700,height=400'); return false;"> Save This Page on del.icio.us</a>
+<p>
+<script type="text/javascript">
+digg_skin = 'icon';
+digg_window = 'new';
+</script>
+<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
+
+
+
+</div> <!-- navBar -->
+
+<div id="siteInfo"><a href="/contact.html">Contact bTucson.com</a> | &copy;2010 bTucson
+| powered by <A HREF="http://abra.info/">ABRA information manager</A> and <A href="http://webglimpse.net/">Webglimpse Search Software</A>
+<br/>
+More 'b' sites...<a href="http://bTeaching.com/">bTeaching : ideas for everyday learning</a> | <a href="http://bDallas.com/">bDallas : Dallas, TX</a>
+</div>
+<br />
+
+</body>
+</html>

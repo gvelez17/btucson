@@ -1,0 +1,142 @@
+Got target file ...
+ROOT TARGET DIR = /home/sites/iwtucson/www
+
+Working on category 310 using template 301.tmpl
+Query is select * from rcatdb_categories where security_level = 0 AND id = 310
+now target file is /home/sites/iwtucson/www/Tucson/Politics & Government//abra.php
+Now target file is /home/sites/iwtucson/www/Tucson/Politics & Government//abra.php
+Processing cat # 310 Politics & Government , outputting to 
+/home/sites/iwtucson/www/Tucson/Politics & Government//abra.php using template /home/sites/iwtucson/catpages/301.tmpl
+
+got 1+ -1 related categories for select rcatdb_categories.* from rcatdb_categories, rcatdb_rcats where rcatdb_rcats.ID = 310 AND rcatdb_categories.ID = rcatdb_rcats.CAT_DEST AND (rcatdb_rcats.RELATION = 'SEE_ALSO') order by rcatdb_categories.display_order, rcatdb_categories.name
+rquery is select rcatdb_items.id, rcatdb_items.itemcode, rcatdb_items.cid, rcatdb_items.name, rcatdb_items.short_content, rcatdb_items.url, rcatdb_items.qualifier, rcatdb_items.rank, rcatdb_items.effective_date, rcatdb_items.entered  from rcatdb_items, rcatdb_ritems where rcatdb_ritems.id = rcatdb_items.id and LENGTH(short_content) > 10 and rcatdb_items.security_level = 0 and rcatdb_items.rank >= 25 and rcatdb_ritems.cat_dest = 310 and rcatdb_ritems.relation = 'BELONGS_TO'  order by rcatdb_items.effective_date desc, rank desc, entered desc, itemcode asc limit 1
+IN abmakev, we have 24 feature items and permanent_item = 30****
+Before query we have -1 + 1 items and threshold = 30
+Now (cid 310) we have 18 + 1 items
+rquery is select rcatdb_items.id, rcatdb_items.itemcode, rcatdb_items.cid, rcatdb_items.name, LEFT(SHORT_CONTENT,800), rcatdb_items.url, rcatdb_items.qualifier, rcatdb_items.effective_date, rcatdb_items.entered  from rcatdb_items, rcatdb_ritems where rcatdb_ritems.id = rcatdb_items.id and rcatdb_items.security_level <=0 and rcatdb_items.rank >= 30 and rcatdb_ritems.cat_dest = 310 and rcatdb_ritems.relation = 'BELONGS_TO'  order by name asc, rcatdb_items.effective_date desc, rank desc, entered desc, itemcode asc limit 337
+With related, have 18 + 1 results
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+We have 18 catitems for 310
+Round of 24 div by 3 is 9
+Round of 1 div by 3 is 1
+Round of 5 div by 3 is 2
+Round of 2 div by 3 is 1
+Round of 6 div by 3 is 3
+Round of 24 div by 3 is 9
+Round of 4 div by 3 is 2
+Round of 0 div by 3 is 1
+Round of 2 div by 3 is 1
+Round of 0 div by 3 is 1
+Round of 9 div by 3 is 4
+Round of 2 div by 3 is 1
+Round of 12 div by 3 is 5
+Round of 4 div by 3 is 2
+Round of 10 div by 3 is 4
+Round of 0 div by 3 is 1
+Round of 8 div by 3 is 3
+Round of 1 div by 3 is 1
+Round of 3 div by 3 is 2
+query: select UID, ITEM_ID, EXT, CAPTION, CREDITS from ab_images,rcatdb_categories  where ab_images.security_level <= 0  AND  rcatdb_categories.id = 310 and  LEFT(catcode,3) = LEFT(imgcode,3)  
+Making blogroll: ***********
+59Done with blogroll: *******
+got 1+ -1 related categories for select rcatdb_categories.* from rcatdb_categories, rcatdb_rcats where rcatdb_rcats.ID = 310 AND rcatdb_categories.ID = rcatdb_rcats.CAT_DEST AND (rcatdb_rcats.RELATION = 'SEE_ALSO') order by rcatdb_categories.display_order, rcatdb_categories.name
+rquery is select rcatdb_items.id, rcatdb_items.itemcode, rcatdb_items.cid, rcatdb_items.name, rcatdb_items.short_content, rcatdb_items.url, rcatdb_items.qualifier, rcatdb_items.rank, rcatdb_items.effective_date, rcatdb_items.entered  from rcatdb_items, rcatdb_ritems where rcatdb_ritems.id = rcatdb_items.id and LENGTH(short_content) > 10 and rcatdb_items.security_level = 0 and rcatdb_items.rank >= 25 and rcatdb_ritems.cat_dest = 310 and rcatdb_ritems.relation = 'BELONGS_TO'  order by rcatdb_items.effective_date desc, rank desc, entered desc, itemcode asc limit 1
+IN abmakev, we have 24 feature items and permanent_item = 30****
+Before query we have -1 + 1 items and threshold = 30
+Now (cid 310) we have 18 + 1 items
+rquery is select rcatdb_items.id, rcatdb_items.itemcode, rcatdb_items.cid, rcatdb_items.name, LEFT(SHORT_CONTENT,800), rcatdb_items.url, rcatdb_items.qualifier, rcatdb_items.effective_date, rcatdb_items.entered  from rcatdb_items, rcatdb_ritems where rcatdb_ritems.id = rcatdb_items.id and rcatdb_items.security_level <=0 and rcatdb_items.rank >= 30 and rcatdb_ritems.cat_dest = 310 and rcatdb_ritems.relation = 'BELONGS_TO'  order by name asc, rcatdb_items.effective_date desc, rank desc, entered desc, itemcode asc limit 337
+With related, have 18 + 1 results
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+Local: 
+
+We have 18 catitems for 310
+Round of 24 div by 3 is 9
+Round of 1 div by 3 is 1
+Round of 5 div by 3 is 2
+Round of 2 div by 3 is 1
+Round of 6 div by 3 is 3
+Round of 24 div by 3 is 9
+Round of 4 div by 3 is 2
+Round of 0 div by 3 is 1
+Round of 2 div by 3 is 1
+Round of 0 div by 3 is 1
+Round of 9 div by 3 is 4
+Round of 2 div by 3 is 1
+Round of 12 div by 3 is 5
+Round of 4 div by 3 is 2
+Round of 10 div by 3 is 4
+Round of 0 div by 3 is 1
+Round of 8 div by 3 is 3
+Round of 1 div by 3 is 1
+Round of 3 div by 3 is 2
+query: select UID, ITEM_ID, EXT, CAPTION, CREDITS from ab_images,rcatdb_categories  where ab_images.security_level <= 0  AND  rcatdb_categories.id = 310 and  LEFT(catcode,3) = LEFT(imgcode,3)  
+Making blogroll: ***********
+59Done with blogroll: *******

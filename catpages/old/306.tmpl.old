@@ -1,0 +1,123 @@
+<HTML><head>
+
+<title>[|CATNAME|]</title>
+
+ <link href="/2col.css" rel="styleSheet" type="text/css">
+<script src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/ab_utils.js"></script>
+<script src="/js/adsense-728-90.js"></script>
+
+</head>
+<body bgcolor="#ffffff">
+
+<div style="left:auto; right:auto;">
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<br\>
+[|DIVCATPATH|]
+<!-- html code for divcatpath is in AbMacros.pm -->
+<!-- also see /w/abra/scripts/makecats.pl -->
+<!-- the style sheet is as defined above,2col.css -->
+<br>
+<FORM method=get ACTION="/cgi-bin/wgtuc/webglimpse.cgi">
+<span class="toplinks"><A HREF="[|THISLINK|]#add">Add listing</A> | <A HREF="/php/access_user/register.php?title=Tucson%20Pages">register</A> | <A HREF="javascript:showLogin()" id="login_link"><span id="login_text">login</span></A>  &nbsp;&nbsp;&nbsp; Search For:
+<INPUT TYPE=HIDDEN NAME="ID" VALUE="1">
+
+<!-- Admins - you can tweak behaviour by adjusting these hidden tags -->
+
+<INPUT TYPE=HIDDEN NAME=nonascii VALUE='off'>  <!-- set to 'on' if using filters -->
+<INPUT TYPE=HIDDEN NAME=maxfiles VALUE='20'>   <!-- number of results per page -->
+<INPUT TYPE=HIDDEN NAME=maxlines VALUE='10'>   <!-- matching lines per file -->
+<INPUT TYPE=HIDDEN NAME=maxchars VALUE='2000'> <!-- num characters to print per match -->
+<INPUT TYPE=HIDDEN NAME=cache VALUE='yes'>     <!-- make a Next Hits toolbar -->
+<INPUT TYPE=HIDDEN NAME=autosyntax VALUE="ALL"> <!-- AND together all words instead of exact phrase -->
+<INPUT TYPE=HIDDEN NAME=limit VALUE="500:100"> <!-- limit results to most recent 100 files, 500 matches for speed -->
+
+<!-- End admin configuration section -->
+
+<INPUT NAME=query size=25> <INPUT TYPE=submit VALUE=Go>
+&nbsp;&nbsp;&nbsp;<A HREF="/cgi-bin/wgtuc/webglimpse.cgi?ID=1">Advanced search</A>
+</FORM>
+</span>
+
+
+
+</center>
+<div id="leftcol">
+
+<form id="login_form" method=POST action="/php/access_user/login.php">               
+<input type=HIDDEN name="next_url" value="http://btucson.com/">
+<span id="login_label"></span>
+<span id="login_br"></span>
+<span id="passwd_label"></span>                                                 <span id="submit_button"></span> 
+</form>
+
+<table border=0 width="100%"> 
+~SUBCATS~ [|FMT_BEGIN|]<A HREF="[|CATLINK|]">[|NAME|]</A> [|FMT_END|]
+</table>
+
+<A NAME="add"></A>
+<H3>FREE - add listings in this category</H3>
+<i>Please report spam or fraudulent listings <A HREF="http://iwhome.com/iwork/contact.html">here</A></i><br>
+
+<small><A HREF="/php/access_user/register.php?title=Tucson%20Pages">Register to enter your free listing below!</A> | Already registered? <b><A HREF="/php/access_user/login.php">login here</A></b></small><br>
+<FORM action="/cgi/blogform.pl" method=post ">
+<!-- doform has to do more than just post entry
+   needs to validate and/or create login
+   post under right category
+-->
+<input type=submit value="POST">.
+<p>
+<input type=HIDDEN name="_REPLY" value="http://btucson.com/thankyou.php">
+<!-- Also don't change the names of the input tags.  Anything else below is fair game -->
+Listing Title : <input name="title" size=25>
+<p>
+Listing Text :
+<textarea rows=4 cols=43 name="SHORT_CONTENT"></textarea>
+<p>
+Category :
+<SELECT name="_catid">
+<OPTION value=[|CATID|]> [|CATNAME|]
+~SUBCATS~ <OPTION value=[|ID|]> [|NAME|] 
+</SELECT>
+<p>
+URL: <input name="URL" size=45><br>
+Phone: <input name="TYPE:ab_biz_org:phone" size=30><br>
+Address: <input name="TYPE:ab_biz_org:addr" size=40><br>
+<p>
+Guest posts welcome - if you are a human, please finish this line: <i>Humpty Dumpty sat on a <input name="human_check_1" size=4 maxlength=4></i>
+<p>
+<input type=submit value="Post">
+</FORM>
+
+</div>
+<div id="rightcol"> 
+
+
+<table bgcolor='#eeddbb' class=blog cellpadding=3 align=right>
+<tr><td bgcolor="#eeffee" class=bloghead>What's new on the <b>[|CATNAME|]</b> Tucson SuperBlog:</td></tr>
+~CATITEMS~ <tr><td><b><small>[|EFFECTIVE_DATE|]</small></b> [|ITEMCATPATH|]<br> [|?LINK?:"<A CLASS=bloglink HREF='"|][|LINK|][|?LINK?:"'>"|]<b>[|NAME|]</b>[|?LINK?:"</A>"|]<br>[|ADDR|][|?ADDR?:"<br>"|][|PHONE|][|?PHONE?:"<br>"|][|SHORT_CONTENT|]  [|?LOGIN?:"--"|][|LOGIN|]<small><A class=blogextlink HREF="[|URL|]">[|DISPLAY_URL|]</A></small><br>[|CONTENT|]</td></tr>
+
+</table>
+
+</div>
+<br clear=all>
+<div align=center id="fullscreen">
+
+
+
+
+
+</center><br>
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-753026-1";
+urchinTracker();
+</script>
+</body>
+</HTML>
